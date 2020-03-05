@@ -43,7 +43,7 @@
         // pone el footer
         public static function footer(){?>
             <footer>
-            	<p>Framework 2020</p>
+            	<p>Mascotas 2020</p>
             	<p>Robert@CIFO</p>
             </footer>
         <?php }
