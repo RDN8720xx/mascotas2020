@@ -10,9 +10,9 @@
     
     // PARAMETROS DE CONFIGURACION BDD 
     define('DB_HOST','localhost');    // host
-    define('DB_USER','root');       // usuario
+    define('DB_USER','alumne');       // usuario
     define('DB_PASS','');             // password
-    define('DB_NAME','biblioteca');   // base de datos
+    define('DB_NAME','Mascotas2020');   // base de datos
     define('DB_CHARSET','utf8');      // codificación
     
     // conector que debe usar PDO,solamente si hemos visto PDO además de mysqli 
@@ -24,7 +24,7 @@
     define('DEFAULT_METHOD', 'index');
     
     // PARA EL ENVIO DE MAIL DE CONTACTO
-    define('CONTACT_EMAIL', 'robertsallent@gmail.com');
+    define('CONTACT_EMAIL', 'robertocifo2018@gmail.com');
     
     
     

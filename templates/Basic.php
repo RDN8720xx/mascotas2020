@@ -4,7 +4,7 @@
         // pone el header
         public static function header(string $pagina = ''){?>
                <header>
-               		<h1>Framework</h1>
+               		<h1>Mascotas</h1>
                		<h2><?=$pagina?></h2>
                </header>
         <?php }
