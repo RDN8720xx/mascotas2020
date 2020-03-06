@@ -14,6 +14,7 @@
         	<nav id="menu">
                 <ul>
         			<li><a href="/">Inicio</a></li>
+        			<li><a href="/usuario/create">Nuevo Usuario</a></li>
         			<li><a href="/contacto">Contactar</a></li>
         		</ul>
         		<?php if(Login::isAdmin()){?>
