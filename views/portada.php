@@ -13,7 +13,7 @@
     		  (TEMPLATE)::login();
     		?>  
     		
-    		<h2>Bienvenido a nuestra biblioteca</h2>
+    		<h2>Bienvenido a MASCOTAS 2020</h2>
     		<?php 
     		  echo Login::get()? 
     		          "<p>Identificado como ".Login::get()->usuario."</p>":
