@@ -25,7 +25,7 @@ class MascotaController{
         //recuperar el libro con dicho codigo
         $mascota=Mascota::getMascota($id);
         
-        //comprobar que el anuncio existe
+        //comprobar que la mascota existe
         if(!$mascota)
             throw new Exception("No existe la mascota $id.");
         
