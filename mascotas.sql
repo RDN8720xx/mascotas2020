@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS mascotas (
   sexo char(1) NOT NULL COMMENT 'M macho, H hembra',
   biografia text NOT NULL,
   fechanacimiento date NOT NULL,
-  fechafallecimiento varchar(32) NOT NULL,
+  fechadepasoAOL varchar(32) NOT NULL,
   idusuario int(11) NOT NULL,
   idraza int(11) NOT NULL,
   FOREIGN KEY (idusuario) REFERENCES usuarios (id) 

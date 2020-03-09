@@ -35,10 +35,11 @@ class Mascota{
         
 
         public function guardar(){ //insertar un nuevo anuncio
-            $consulta="INSERT INTO anuncis(titol, descripcio,
-                            preu, imatge, idusuario)
-                VALUES('$this->titol','$this->descripcio',
-                       $this->preu, '$this->imatge',$this->idusuario)";
+            $consulta="INSERT INTO mascotas(nombre, sexo, biografia,
+                            fechanacimiento, fechadepasoAOL, idusuario, idraza)
+                VALUES('$this->nombre','$this->sexo','$this->biografia',
+                       $this->fechanacimiento, '$this->fechadepasoAOL, 
+                       $this->idusuario, $this->idraza)";
             
             echo $consulta;
             
@@ -46,24 +47,27 @@ class Mascota{
 
         }
 
-        public static function borrar(int $id){ //borrar un anuncio por id
+        public static function borrar(int $id){ //borrar una mascota por id
             //preparar la consulta
-            $consulta="DELETE FROM anuncis WHERE id=$id";
+            $consulta="DELETE FROM mascotas WHERE id=$id";
             
-            echo $consulta; //Visualizacion de prueba de los datos del anuncio a borrar
+            echo $consulta; //Visualizacion de prueba de los datos de la mascota a borrar
             
             //ejecutar consulta
             return DB::delete($consulta);
             
         }
         
-        public function actualizar(){ //actualizar un anuncio
+        public function actualizar(){ //actualizar una mascota
             //preparar consulta
-            $consulta="UPDATE anuncis SET
-                            titol='$this->titol',
-                            descripcio='$this->descripcio',
-                            preu='$this->preu',
-                            imatge='$this->imatge'
+            $consulta="UPDATE mascotas SET
+                            nombre='$this->nombre',
+                            sexo='$this->sexo',
+                            biografia='$this->biografia',
+                            fechanacimiento=$this->fechanacimiento,
+                            fechadepasoAOL=$this->fechadepasoAOL,
+                            
+                            
                         WHERE id=$this->id";      
             
             echo $consulta;
@@ -72,11 +76,11 @@ class Mascota{
         }
         
         public function __toString():string{ //__toString
-            return "$this->id $this->titol $this->descripcio, $this->preu, $this->imatge,
-                 $this->idusuario";
+            return "$this->id $this->nombre $this->biografia, $this->fechanacimiento,
+                 $this->fechadepasoAOL, $this->idusuario, $this->idraza";
         }
         
-        //pasa un array de libros a JSON22
+        //pasa un array de libros a JSON
         public static function tojson(array $lista):string{
             return json_encode($lista);
         }
